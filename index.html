@@ -9,18 +9,27 @@
 <body>
     <div class="container">
         <h1>Pay Using UPI</h1>
-        <p>Click the button or scan the QR code to pay Jovin Jeffin.</p>
+        <p>Scan the QR or use one of the UPI apps below.</p>
 
+        <!-- QR Code -->
         <div id="qrcode"></div>
 
-        <a id="upiLink" class="btn" target="_blank">Pay Now via UPI</a>
-
-        <div class="note">
-            <p><b>UPI ID:</b> jovinjeffin@okicici</p>
-            <p><b>Amount:</b> ₹2500</p>
+        <!-- UPI Buttons -->
+        <div class="upi-buttons">
+            <a id="gpay" class="btn gpay" target="_blank">Pay via Google Pay</a>
+            <a id="phonepe" class="btn phonepe" target="_blank">Pay via PhonePe</a>
+            <a id="paytm" class="btn paytm" target="_blank">Pay via Paytm</a>
         </div>
+
+        <!-- Manual UPI ID Copy -->
+        <div class="note">
+            <p><b>UPI ID:</b> <span id="upiId">jovinjeffin@okicici</span></p>
+            <button id="copyBtn">Copy UPI ID</button>
+        </div>
+
     </div>
 
+    <!-- QR Code Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="script.js"></script>
 </body>
