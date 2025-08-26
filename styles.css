@@ -8,36 +8,36 @@ body {
 }
 
 .container {
+    text-align: center;
     background: white;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
     width: 300px;
 }
 
-input {
-    width: 90%;
-    padding: 8px;
-    margin: 10px 0;
-    font-size: 16px;
+#qrcode {
+    margin: 15px auto;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
+.btn {
+    display: inline-block;
     padding: 10px 15px;
-    font-size: 16px;
-    border: none;
+    margin: 15px 0;
+    background-color: #4285f4;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
     border-radius: 8px;
-    cursor: pointer;
+    transition: background 0.3s;
 }
 
-button:hover {
-    background-color: #45a049;
+.btn:hover {
+    background-color: #3367d6;
 }
 
-#status {
+.note {
     margin-top: 15px;
-    font-weight: bold;
+    font-size: 14px;
+    color: #333;
 }
