@@ -1,5 +1,5 @@
 // UPI Details
-const upiID = "jovinjeffin@okicici";
+const upiID = "shriraamsj21-1@oksbi";
 const name = "Jovin Jeffin";
 const amount = "2500";
 const currency = "INR";
@@ -20,3 +20,4 @@ new QRCode(document.getElementById("qrcode"), {
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.H
 });
+
