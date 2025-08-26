@@ -1,22 +1,22 @@
-document.getElementById("payBtn").addEventListener("click", function() {
-    const amount = document.getElementById("amount").value;
-    if (!amount || amount <= 0) {
-        alert("Please enter a valid amount!");
-        return;
-    }
+// UPI Details
+const upiID = "jovinjeffin@okicici";
+const name = "Jovin Jeffin";
+const amount = "2500";
+const currency = "INR";
+const note = "Payment for Order #123";
 
-    // Dynamic UPI details
-    const upiID = "jovinjeffin@okicici";       // Replace with your UPI ID
-    const name = "Jovin J";            // Your name/business name
-    const transactionNote = "Payment for Order #123"; 
-    const currency = "INR";
+// UPI Payment URL (clickable link)
+const upiURL = `upi://pay?pa=${upiID}&pn=${encodeURIComponent(name)}&am=${amount}&cu=${currency}&tn=${encodeURIComponent(note)}`;
 
-    // Create UPI URL
-    const upiLink = `upi://pay?pa=${upiID}&pn=${encodeURIComponent(name)}&am=${amount}&cu=${currency}&tn=${encodeURIComponent(transactionNote)}`;
+// Set the link
+document.getElementById("upiLink").href = upiURL;
 
-    // Redirect to UPI app
-    window.location.href = upiLink;
-
-    // Show info to user
-    document.getElementById("status").innerText = "Redirecting to UPI app...";
+// Generate QR Code
+new QRCode(document.getElementById("qrcode"), {
+    text: upiURL,
+    width: 180,
+    height: 180,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
 });
